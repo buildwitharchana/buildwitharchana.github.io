@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,16 +60,18 @@
         }
 
         .nav-container {
-            height: 72px;
+            min-height: 72px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 25px;
         }
 
         .logo {
             font-size: 1.15rem;
             font-weight: 800;
             color: #111827;
+            white-space: nowrap;
         }
 
         .logo span {
@@ -77,10 +80,11 @@
 
         .nav-links {
             display: flex;
-            gap: 28px;
+            gap: 24px;
             list-style: none;
-            font-size: 0.9rem;
+            font-size: 0.86rem;
             font-weight: 600;
+            align-items: center;
         }
 
         .nav-links a {
@@ -546,6 +550,10 @@
            CERTIFICATIONS
         ========================= */
 
+        .certifications {
+            background: #f8fafc;
+        }
+
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -609,6 +617,13 @@
            RESPONSIVE
         ========================= */
 
+        @media (max-width: 1050px) {
+            .nav-links {
+                gap: 14px;
+                font-size: 0.78rem;
+            }
+        }
+
         @media (max-width: 900px) {
 
             .skills-grid,
@@ -624,13 +639,13 @@
                 align-items: flex-start;
                 flex-direction: column;
             }
-        }
-
-        @media (max-width: 700px) {
 
             .nav-links {
                 display: none;
             }
+        }
+
+        @media (max-width: 700px) {
 
             .incident-grid {
                 grid-template-columns: 1fr;
@@ -669,6 +684,11 @@
             .section-header h2 {
                 font-size: 1.9rem;
             }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -692,6 +712,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
 
@@ -733,6 +754,14 @@
                 View Experience
             </a>
 
+            <a href="#education" class="btn btn-secondary">
+                Education
+            </a>
+
+            <a href="#certifications" class="btn btn-secondary">
+                Certifications
+            </a>
+
             <a href="https://github.com/buildwitharchana"
                target="_blank"
                rel="noopener"
@@ -745,6 +774,11 @@
                rel="noopener"
                class="btn btn-secondary">
                 LinkedIn
+            </a>
+
+            <a href="mailto:archana_kum@yahoo.in"
+               class="btn btn-secondary">
+                Email
             </a>
 
         </div>
@@ -870,23 +904,22 @@
             <div>
 
                 <h3>
-                    Bachelor of Technology
+                    Maulana Abul Kalam Azad University of Technology (WBUT)
                 </h3>
 
                 <div class="degree">
-                    Computer Science and Engineering
+                    Bachelor of Technology — Computer Science and Engineering
                 </div>
 
                 <p>
-                    Engineering education focused on Computer Science and
-                    Engineering, providing the foundation for my career in
-                    software engineering, application development,
-                    architecture and technology.
+                    West Bengal, India
                 </p>
 
                 <p style="margin-top: 8px;">
-                    <strong>Engineering College:</strong>
-                    College name to be added from LinkedIn.
+                    Engineering education in Computer Science and Engineering,
+                    providing the technical foundation for my career in
+                    software engineering, application development,
+                    architecture and technology.
                 </p>
 
             </div>
@@ -991,7 +1024,6 @@
 
             </div>
 
-
             <div class="skill-card">
 
                 <h3>Architecture & Cloud</h3>
@@ -1008,7 +1040,6 @@
 
             </div>
 
-
             <div class="skill-card">
 
                 <h3>Software Engineering</h3>
@@ -1024,7 +1055,6 @@
                 </div>
 
             </div>
-
 
             <div class="skill-card">
 
@@ -1074,11 +1104,7 @@
 
         </div>
 
-
         <div class="project-grid">
-
-
-            <!-- PROJECT 1 -->
 
             <article class="project-card">
 
@@ -1112,15 +1138,12 @@
                 </p>
 
                 <div class="architecture">
-
                     <strong>Architecture:</strong>
-
                     Multiple REST APIs →
                     Concurrent Python Data Collection →
                     Data Transformation →
                     Business Rules →
                     Automated Report
-
                 </div>
 
                 <br>
@@ -1136,8 +1159,6 @@
 
             </article>
 
-
-            <!-- PROJECT 2 -->
 
             <article class="project-card">
 
@@ -1170,16 +1191,13 @@
                 </p>
 
                 <div class="architecture">
-
                     <strong>Authentication Flow:</strong>
-
                     User →
                     Application →
                     AWS Cognito →
                     Azure AD B2C →
                     Token / Claims →
                     Application
-
                 </div>
 
                 <br>
@@ -1195,8 +1213,6 @@
 
             </article>
 
-
-            <!-- PROJECT 3 -->
 
             <article class="project-card">
 
@@ -1236,16 +1252,13 @@
                 </p>
 
                 <div class="architecture">
-
                     <strong>Focus:</strong>
-
                     Payment APIs →
                     Merchant Integration →
                     Transaction Processing →
                     QA Automation →
                     Monitoring →
                     Production Support
-
                 </div>
 
                 <br>
@@ -1261,8 +1274,6 @@
 
             </article>
 
-
-            <!-- PROJECT 4 -->
 
             <article class="project-card">
 
@@ -1299,16 +1310,13 @@
                 </p>
 
                 <div class="architecture">
-
                     <strong>Focus:</strong>
-
                     Digital Marketplace →
                     REST APIs →
                     AWS Infrastructure →
                     OpenSearch →
                     RDS →
                     Multi-Gateway Payments
-
                 </div>
 
                 <br>
@@ -1325,8 +1333,6 @@
 
             </article>
 
-
-            <!-- PROJECT 5 -->
 
             <article class="project-card">
 
@@ -1357,15 +1363,12 @@
                 </p>
 
                 <div class="architecture">
-
                     <strong>Focus:</strong>
-
                     Enterprise Modules →
                     Laravel →
                     Eloquent ORM →
                     Payment APIs →
                     Stripe / PayPal / Bitcoin
-
                 </div>
 
                 <br>
@@ -1382,8 +1385,6 @@
 
             </article>
 
-
-            <!-- PROJECT 6 -->
 
             <article class="project-card">
 
@@ -1416,16 +1417,13 @@
                 </p>
 
                 <div class="architecture">
-
                     <strong>Pattern:</strong>
-
                     Enterprise Data →
                     Retrieval →
                     LLM →
                     Reasoning / Agent →
                     Business Workflow →
                     Action / Outcome
-
                 </div>
 
                 <br>
@@ -1574,9 +1572,6 @@
 
         <div class="timeline">
 
-
-            <!-- USHUR -->
-
             <div class="timeline-item">
 
                 <h3>
@@ -1658,8 +1653,6 @@
             </div>
 
 
-            <!-- SIMPL -->
-
             <div class="timeline-item">
 
                 <h3>
@@ -1732,8 +1725,6 @@
             </div>
 
 
-            <!-- ESMART / HILTON -->
-
             <div class="timeline-item">
 
                 <h3>
@@ -1797,8 +1788,6 @@
             </div>
 
 
-            <!-- GLOBUSSOFT -->
-
             <div class="timeline-item">
 
                 <h3>
@@ -1861,7 +1850,7 @@
      CERTIFICATIONS
 ========================= -->
 
-<section>
+<section id="certifications" class="certifications">
 
     <div class="container">
 
@@ -1874,6 +1863,12 @@
             <h2>
                 Continuous Learning
             </h2>
+
+            <p>
+                Professional certifications and continuous learning focused
+                on AI engineering, cloud technologies, LLMs and modern
+                application architecture.
+            </p>
 
         </div>
 
@@ -1968,12 +1963,11 @@
 <footer>
 
     <div class="container">
-
         © 2026 Archana Kumari · Vancouver, Canada
-
     </div>
 
 </footer>
 
 </body>
 </html>
+```
