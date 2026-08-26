@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Archana Kumari | Lead Technical Consultant | Solution Architecture | AI & Customer Experience Transformation | Global Enterprise Delivery</title>
+    <title>Archana Kumari | Solution Architect | Software Engineer | AI & Customer Experience Transformation | Global Enterprise Delivery</title>
 
     <meta name="description"
-          content="Archana Kumari — Solution Architect and Technical Consultant with 10 years of experience across AI, enterprise architecture, software engineering, automation, APIs and cloud technologies.">
+          content="Archana Kumari — Solution Architect, Software Engineer and AI Engineer with 10+ years of experience in enterprise architecture, software engineering, cloud, APIs, AI, automation and technical consulting.">
+
+    <meta name="keywords"
+          content="Solution Architect, Software Engineer, Software Engineering, AI Solutions Architect, Technical Consultant, Cloud Architect, Generative AI, Agentic AI, LLM, RAG, Python, AWS, Azure, GCP, REST APIs, Microservices, Enterprise Architecture">
 
     <meta name="author" content="Archana Kumari">
 
@@ -18,6 +21,18 @@
           rel="stylesheet">
 
     <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --dark: #0f172a;
+            --text: #172033;
+            --muted: #667085;
+            --light: #f8fafc;
+            --border: #e5e7eb;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -26,13 +41,14 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 85px;
         }
 
         body {
             font-family: "Inter", sans-serif;
             line-height: 1.65;
-            color: #172033;
-            background: #f8fafc;
+            color: var(--text);
+            background: var(--light);
         }
 
         a {
@@ -41,7 +57,7 @@
         }
 
         .container {
-            width: min(1150px, 92%);
+            width: min(1180px, 92%);
             margin: auto;
         }
 
@@ -53,9 +69,10 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255,255,255,0.94);
-            backdrop-filter: blur(14px);
-            border-bottom: 1px solid #e5e7eb;
+            background: rgba(255,255,255,0.88);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(229,231,235,0.8);
         }
 
         .nav-container {
@@ -67,31 +84,39 @@
         }
 
         .logo {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 800;
-            color: #111827;
+            letter-spacing: -0.03em;
             white-space: nowrap;
         }
 
         .logo span {
-            color: #6366f1;
+            color: var(--primary);
         }
 
         .nav-links {
             display: flex;
-            gap: 24px;
+            gap: 22px;
             list-style: none;
-            font-size: 0.86rem;
-            font-weight: 600;
             align-items: center;
+            font-size: 0.82rem;
+            font-weight: 600;
         }
 
         .nav-links a {
+            color: #475467;
             transition: 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: #6366f1;
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            padding: 9px 15px;
+            border-radius: 8px;
+            background: var(--dark);
+            color: white !important;
         }
 
         /* =========================
@@ -99,46 +124,96 @@
         ========================= */
 
         .hero {
-            padding: 115px 0 100px;
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 0;
             background:
-                radial-gradient(circle at top right,
-                rgba(99,102,241,0.14),
-                transparent 35%),
+                radial-gradient(circle at 85% 15%, rgba(99,102,241,0.20), transparent 28%),
+                radial-gradient(circle at 10% 70%, rgba(139,92,246,0.08), transparent 25%),
                 linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border: 1px solid rgba(99,102,241,0.08);
+            border-radius: 50%;
+            right: -180px;
+            top: 80px;
         }
 
         .hero-content {
-            max-width: 920px;
+            max-width: 980px;
+            position: relative;
+            z-index: 1;
         }
 
         .eyebrow {
-            display: inline-block;
-            padding: 7px 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            border: 1px solid #e0e7ff;
             border-radius: 999px;
-            background: #eef2ff;
-            color: #4f46e5;
-            font-size: 0.8rem;
+            background: #f5f7ff;
+            color: var(--primary-dark);
+            font-size: 0.78rem;
             font-weight: 700;
-            margin-bottom: 22px;
+            margin-bottom: 25px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 0 4px rgba(34,197,94,0.10);
         }
 
         .hero h1 {
-            font-size: clamp(2.7rem, 6vw, 5rem);
-            line-height: 1.05;
-            letter-spacing: -0.055em;
-            margin-bottom: 25px;
-            color: #111827;
+            max-width: 1000px;
+            font-size: clamp(3rem, 7vw, 5.7rem);
+            line-height: 0.98;
+            letter-spacing: -0.065em;
+            color: #0b1220;
+            margin-bottom: 30px;
         }
 
         .hero h1 span {
-            color: #6366f1;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
-        .hero p {
-            max-width: 800px;
-            font-size: 1.15rem;
-            color: #5b6474;
-            margin-bottom: 34px;
+        .hero-subtitle {
+            max-width: 850px;
+            font-size: 1.17rem;
+            color: #596579;
+            margin-bottom: 35px;
+        }
+
+        .hero-keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-bottom: 36px;
+        }
+
+        .hero-keywords span {
+            padding: 7px 11px;
+            border-radius: 7px;
+            background: white;
+            border: 1px solid var(--border);
+            color: #475467;
+            font-size: 0.76rem;
+            font-weight: 600;
         }
 
         .hero-buttons {
@@ -150,61 +225,67 @@
         .btn {
             padding: 12px 20px;
             border-radius: 9px;
-            font-weight: 600;
-            transition: 0.2s ease;
-            display: inline-block;
+            font-size: 0.86rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.22s ease;
         }
 
         .btn-primary {
-            background: #111827;
+            background: var(--dark);
             color: white;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(15,23,42,0.18);
         }
 
         .btn-secondary {
-            border: 1px solid #d1d5db;
             background: white;
+            border: 1px solid var(--border);
         }
 
         .btn-secondary:hover {
-            border-color: #6366f1;
-            color: #6366f1;
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
         }
 
         /* =========================
-           SECTIONS
+           GENERAL SECTIONS
         ========================= */
 
         section {
-            padding: 90px 0;
+            padding: 95px 0;
         }
 
         .section-header {
-            margin-bottom: 45px;
+            margin-bottom: 48px;
         }
 
         .section-header .label {
-            color: #6366f1;
+            color: var(--primary);
             text-transform: uppercase;
-            font-size: 0.73rem;
+            font-size: 0.7rem;
             font-weight: 800;
-            letter-spacing: 0.13em;
-            margin-bottom: 8px;
+            letter-spacing: 0.15em;
+            margin-bottom: 9px;
         }
 
         .section-header h2 {
-            font-size: 2.25rem;
-            letter-spacing: -0.035em;
+            font-size: clamp(2rem, 4vw, 2.7rem);
+            line-height: 1.15;
+            letter-spacing: -0.045em;
             color: #111827;
         }
 
         .section-header p {
-            margin-top: 12px;
-            max-width: 780px;
-            color: #667085;
+            max-width: 800px;
+            margin-top: 13px;
+            color: var(--muted);
         }
 
         /* =========================
@@ -213,8 +294,9 @@
 
         .about-grid {
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 65px;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 70px;
+            align-items: start;
         }
 
         .about-text p {
@@ -229,64 +311,118 @@
         .about-highlights {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
+            gap: 14px;
         }
 
         .highlight {
-            padding: 22px;
+            padding: 23px;
             background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 14px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            transition: 0.2s ease;
+        }
+
+        .highlight:hover {
+            transform: translateY(-3px);
+            border-color: #c7d2fe;
         }
 
         .highlight strong {
             display: block;
-            font-size: 1.55rem;
+            font-size: 1.7rem;
             color: #111827;
             margin-bottom: 4px;
         }
 
         .highlight span {
-            font-size: 0.84rem;
-            color: #667085;
+            color: var(--muted);
+            font-size: 0.8rem;
         }
 
         /* =========================
-           EDUCATION
+           ARCHITECTURE FOCUS
         ========================= */
 
-        .education-card {
+        .architecture-section {
+            background: #0b1220;
+            color: white;
+        }
+
+        .architecture-section .section-header h2 {
+            color: white;
+        }
+
+        .architecture-section .section-header p {
+            color: #94a3b8;
+        }
+
+        .architecture-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .architecture-card {
+            padding: 26px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 15px;
+        }
+
+        .architecture-icon {
+            width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            border-radius: 10px;
+            background: rgba(99,102,241,0.18);
+            color: #a5b4fc;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .architecture-card h3 {
+            font-size: 1rem;
+            margin-bottom: 9px;
+        }
+
+        .architecture-card p {
+            color: #94a3b8;
+            font-size: 0.82rem;
+        }
+
+        /* =========================
+           METRICS
+        ========================= */
+
+        .metrics {
             background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 18px;
-            padding: 32px;
-            display: flex;
-            justify-content: space-between;
-            gap: 30px;
-            align-items: center;
         }
 
-        .education-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 7px;
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .metric {
+            padding: 28px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            background: #fafbfc;
+        }
+
+        .metric strong {
+            display: block;
+            font-size: 2rem;
+            letter-spacing: -0.04em;
             color: #111827;
+            margin-bottom: 5px;
         }
 
-        .education-card .degree {
-            color: #6366f1;
-            font-weight: 700;
-            margin-bottom: 7px;
-        }
-
-        .education-card p {
-            color: #667085;
-        }
-
-        .education-year {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: #667085;
-            white-space: nowrap;
+        .metric span {
+            color: var(--muted);
+            font-size: 0.8rem;
         }
 
         /* =========================
@@ -296,68 +432,41 @@
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
+            gap: 17px;
         }
 
         .skill-card {
             background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 14px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
             padding: 25px;
+            transition: 0.22s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(15,23,42,0.07);
         }
 
         .skill-card h3 {
-            margin-bottom: 15px;
-            font-size: 1rem;
+            margin-bottom: 16px;
+            font-size: 0.96rem;
             color: #111827;
         }
 
         .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 7px;
         }
 
         .tag {
-            padding: 6px 10px;
+            padding: 6px 9px;
             background: #f1f5f9;
             border-radius: 6px;
-            font-size: 0.74rem;
+            font-size: 0.7rem;
             font-weight: 600;
             color: #475467;
-        }
-
-        /* =========================
-           METRICS
-        ========================= */
-
-        .metrics {
-            background: #ffffff;
-        }
-
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
-
-        .metric {
-            padding: 28px;
-            border: 1px solid #e5e7eb;
-            border-radius: 15px;
-            background: #f8fafc;
-        }
-
-        .metric strong {
-            display: block;
-            font-size: 2rem;
-            color: #111827;
-            margin-bottom: 5px;
-        }
-
-        .metric span {
-            color: #667085;
-            font-size: 0.86rem;
         }
 
         /* =========================
@@ -370,115 +479,69 @@
 
         .project-grid {
             display: grid;
-            gap: 25px;
+            gap: 22px;
         }
 
         .project-card {
-            border: 1px solid #e5e7eb;
+            border: 1px solid var(--border);
             border-radius: 18px;
             padding: 34px;
-            background: #ffffff;
+            background: white;
             transition: 0.25s ease;
         }
 
         .project-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(15,23,42,0.08);
+            box-shadow: 0 18px 45px rgba(15,23,42,0.08);
         }
 
         .project-number {
-            font-size: 0.76rem;
+            font-size: 0.7rem;
             font-weight: 800;
-            color: #6366f1;
-            letter-spacing: 0.08em;
+            color: var(--primary);
+            letter-spacing: 0.12em;
         }
 
         .project-card h3 {
-            font-size: 1.45rem;
+            font-size: 1.4rem;
             margin: 7px 0 14px;
             color: #111827;
+            letter-spacing: -0.025em;
         }
 
         .project-card p {
             color: #5b6474;
-            margin-bottom: 17px;
-            max-width: 950px;
+            margin-bottom: 14px;
+            max-width: 1000px;
+        }
+
+        .architecture {
+            margin-top: 19px;
+            padding: 15px 18px;
+            border-left: 3px solid var(--primary);
+            background: #f8fafc;
+            color: #475467;
+            font-size: 0.82rem;
+        }
+
+        .architecture strong {
+            color: #111827;
         }
 
         .project-meta {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 7px;
+            margin-top: 17px;
         }
 
         .project-meta span {
-            font-size: 0.74rem;
-            font-weight: 600;
-            padding: 6px 10px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 6px 9px;
             background: #eef2ff;
             color: #4338ca;
             border-radius: 6px;
-        }
-
-        .architecture {
-            margin-top: 20px;
-            padding: 15px 18px;
-            border-left: 3px solid #6366f1;
-            background: #f8fafc;
-            font-size: 0.87rem;
-            color: #475467;
-        }
-
-        /* =========================
-           INCIDENT
-        ========================= */
-
-        .incident-section {
-            background: #0f172a;
-            color: white;
-        }
-
-        .incident-section .section-header h2 {
-            color: white;
-        }
-
-        .incident-section .section-header p {
-            color: #cbd5e1;
-        }
-
-        .incident-card {
-            background: #172033;
-            border: 1px solid #26334a;
-            border-radius: 18px;
-            padding: 34px;
-        }
-
-        .incident-card h3 {
-            font-size: 1.45rem;
-            margin-bottom: 22px;
-        }
-
-        .incident-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .incident-step {
-            padding: 20px;
-            border: 1px solid #29364d;
-            border-radius: 12px;
-        }
-
-        .incident-step strong {
-            display: block;
-            color: #a5b4fc;
-            margin-bottom: 8px;
-        }
-
-        .incident-step p {
-            color: #cbd5e1;
-            font-size: 0.89rem;
         }
 
         /* =========================
@@ -486,13 +549,13 @@
         ========================= */
 
         .timeline {
-            border-left: 2px solid #e5e7eb;
-            padding-left: 32px;
+            border-left: 2px solid var(--border);
+            padding-left: 34px;
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 50px;
+            margin-bottom: 54px;
         }
 
         .timeline-item:last-child {
@@ -502,12 +565,14 @@
         .timeline-item::before {
             content: "";
             position: absolute;
-            width: 11px;
-            height: 11px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            background: #6366f1;
-            left: -39px;
-            top: 9px;
+            background: var(--primary);
+            border: 3px solid #f8fafc;
+            box-shadow: 0 0 0 1px #c7d2fe;
+            left: -41px;
+            top: 7px;
         }
 
         .timeline-item h3 {
@@ -516,20 +581,20 @@
         }
 
         .timeline-item .company {
-            color: #6366f1;
+            color: var(--primary);
             font-weight: 700;
-            margin-top: 3px;
+            margin-top: 2px;
         }
 
         .timeline-item .date {
-            font-size: 0.8rem;
+            font-size: 0.77rem;
             color: #98a2b3;
             margin: 5px 0 13px;
         }
 
         .timeline-item .role-summary {
             color: #475467;
-            margin-bottom: 13px;
+            margin-bottom: 14px;
         }
 
         .timeline-item ul {
@@ -546,6 +611,100 @@
         }
 
         /* =========================
+           EDUCATION
+        ========================= */
+
+        .education {
+            background: #f8fafc;
+        }
+
+        .education-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 32px;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .education-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 7px;
+            color: #111827;
+        }
+
+        .education-card .degree {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        .education-card p {
+            color: var(--muted);
+        }
+
+        .education-year {
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #667085;
+            white-space: nowrap;
+        }
+
+        /* =========================
+           INCIDENT
+        ========================= */
+
+        .incident-section {
+            background: #0f172a;
+            color: white;
+        }
+
+        .incident-section .section-header h2 {
+            color: white;
+        }
+
+        .incident-section .section-header p {
+            color: #94a3b8;
+        }
+
+        .incident-card {
+            background: #172033;
+            border: 1px solid #26334a;
+            border-radius: 18px;
+            padding: 34px;
+        }
+
+        .incident-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 23px;
+        }
+
+        .incident-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .incident-step {
+            padding: 20px;
+            border: 1px solid #29364d;
+            border-radius: 12px;
+        }
+
+        .incident-step strong {
+            display: block;
+            color: #a5b4fc;
+            margin-bottom: 7px;
+        }
+
+        .incident-step p {
+            color: #cbd5e1;
+            font-size: 0.84rem;
+        }
+
+        /* =========================
            CERTIFICATIONS
         ========================= */
 
@@ -556,15 +715,15 @@
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            gap: 14px;
         }
 
         .cert {
             background: white;
-            border: 1px solid #e5e7eb;
+            border: 1px solid var(--border);
             padding: 19px 20px;
-            border-radius: 10px;
-            font-size: 0.88rem;
+            border-radius: 11px;
+            font-size: 0.84rem;
             font-weight: 600;
         }
 
@@ -573,17 +732,18 @@
         ========================= */
 
         .contact {
-            background: #f1f5f9;
+            background: #eef2ff;
             text-align: center;
         }
 
         .contact-content {
-            max-width: 750px;
+            max-width: 800px;
             margin: auto;
         }
 
         .contact-content h2 {
-            font-size: 2.35rem;
+            font-size: clamp(2rem, 4vw, 2.7rem);
+            letter-spacing: -0.045em;
             margin-bottom: 14px;
             color: #111827;
         }
@@ -597,7 +757,7 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
         }
 
         /* =========================
@@ -606,10 +766,45 @@
 
         footer {
             padding: 28px 0;
-            background: #111827;
+            background: #0b1220;
             color: #94a3b8;
             text-align: center;
-            font-size: 0.82rem;
+            font-size: 0.78rem;
+        }
+
+        /* =========================
+           SCROLL TO TOP
+        ========================= */
+
+        #scrollTop {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            width: 46px;
+            height: 46px;
+            border: none;
+            border-radius: 50%;
+            background: var(--dark);
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: all 0.25s ease;
+            z-index: 999;
+            box-shadow: 0 8px 25px rgba(15,23,42,0.22);
+        }
+
+        #scrollTop.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollTop:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
         }
 
         /* =========================
@@ -618,81 +813,83 @@
 
         @media (max-width: 1050px) {
             .nav-links {
-                gap: 14px;
-                font-size: 0.78rem;
+                gap: 13px;
+                font-size: 0.75rem;
+            }
+
+            .skills-grid,
+            .architecture-grid,
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
         @media (max-width: 900px) {
-
-            .skills-grid,
-            .metrics-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
             .about-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
             }
 
             .education-card {
                 align-items: flex-start;
                 flex-direction: column;
             }
-
-            .nav-links {
-                display: none;
-            }
         }
 
         @media (max-width: 700px) {
-
-            .incident-grid {
+            .incident-grid,
+            .cert-grid {
                 grid-template-columns: 1fr;
             }
 
-            .cert-grid {
-                grid-template-columns: 1fr;
+            .hero {
+                min-height: auto;
+                padding: 80px 0;
             }
         }
 
         @media (max-width: 550px) {
-
             section {
-                padding: 65px 0;
-            }
-
-            .hero {
-                padding: 75px 0 65px;
+                padding: 68px 0;
             }
 
             .skills-grid,
+            .architecture-grid,
             .metrics-grid,
             .about-highlights {
                 grid-template-columns: 1fr;
             }
 
             .project-card,
-            .incident-card {
+            .incident-card,
+            .education-card {
                 padding: 23px;
             }
 
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 3rem;
             }
 
-            .section-header h2 {
-                font-size: 1.9rem;
+            .hero-subtitle {
+                font-size: 1rem;
             }
 
             .btn {
                 width: 100%;
-                text-align: center;
+            }
+
+            #scrollTop {
+                right: 16px;
+                bottom: 16px;
             }
         }
     </style>
 </head>
 
-<body>
+<body id="top">
 
 <!-- =========================
      NAVIGATION
@@ -701,18 +898,19 @@
 <nav>
     <div class="container nav-container">
 
-        <a href="#" class="logo">
+        <a href="#top" class="logo">
             BuildWith<span>Archana</span>
         </a>
 
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
+            <li><a href="#architecture">Architecture</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="nav-cta">Let's Connect</a></li>
         </ul>
 
     </div>
@@ -727,21 +925,39 @@
 
     <div class="container hero-content">
 
-        <span class="eyebrow">
-            AI Engineer • Solution Architect • Technical Consultant
-        </span>
+        <div class="eyebrow">
+            Open to Solution Architecture • Software Engineering • AI Engineering
+        </div>
 
         <h1>
-            Building practical solutions with
-            <span>AI, Software & Technology.</span>
+            Solution Architect.
+            <br>
+            <span>Software Engineer.</span>
+            <br>
+            AI Builder.
         </h1>
 
-        <p>
-            I'm Archana Kumari, a Software Engineer and Solution Architect
-            with 10 years of experience designing enterprise solutions,
-            leading technical teams, building software products and applying
-            AI and automation to real-world business problems.
+        <p class="hero-subtitle">
+            I'm Archana Kumari — a Solution Architect, Software Engineer and
+            AI Engineer with 10+ years of experience designing enterprise
+            systems, building software, integrating APIs, architecting cloud
+            solutions and applying Generative AI to real-world business
+            problems.
         </p>
+
+        <div class="hero-keywords">
+            <span>Solution Architecture</span>
+            <span>Software Engineering</span>
+            <span>Enterprise Architecture</span>
+            <span>AI Engineering</span>
+            <span>Generative AI</span>
+            <span>Agentic AI</span>
+            <span>Cloud Architecture</span>
+            <span>Python</span>
+            <span>AWS</span>
+            <span>REST APIs</span>
+            <span>Microservices</span>
+        </div>
 
         <div class="hero-buttons">
 
@@ -751,14 +967,6 @@
 
             <a href="#experience" class="btn btn-secondary">
                 View Experience
-            </a>
-
-            <a href="#education" class="btn btn-secondary">
-                Education
-            </a>
-
-            <a href="#certifications" class="btn btn-secondary">
-                Certifications
             </a>
 
             <a href="https://github.com/buildwitharchana"
@@ -773,11 +981,6 @@
                rel="noopener"
                class="btn btn-secondary">
                 LinkedIn
-            </a>
-
-            <a href="mailto:archana_kum@yahoo.in"
-               class="btn btn-secondary">
-                Email
             </a>
 
         </div>
@@ -796,13 +999,8 @@
     <div class="container">
 
         <div class="section-header">
-
-            <div class="label">About Me</div>
-
-            <h2>
-                Engineering solutions from business problem to production.
-            </h2>
-
+            <div class="label">Profile</div>
+            <h2>Engineering solutions from business problem to production.</h2>
         </div>
 
         <div class="about-grid">
@@ -810,41 +1008,43 @@
             <div class="about-text">
 
                 <p>
-                    I am a <strong>Software Engineer, Solution Architect and
-                    Technical Consultant</strong> with 10 years of experience
-                    across software engineering, enterprise architecture,
-                    cloud technologies, automation and AI.
+                    I am a <strong>Solution Architect, Software Engineer and
+                    Technical Consultant</strong> with 10+ years of experience
+                    spanning software engineering, enterprise architecture,
+                    cloud, integrations, automation and AI.
                 </p>
 
                 <p>
-                    My strength is working at the intersection of
-                    <strong>technology, business and customers</strong>.
-                    I translate complex requirements into practical technical
-                    solutions, work with engineering and product teams, and
-                    stay involved from solution design through implementation,
-                    UAT and production delivery.
+                    My career has evolved from hands-on
+                    <strong>software development and backend engineering</strong>
+                    into solution architecture and technical leadership. I
+                    enjoy understanding complex business problems and turning
+                    them into scalable, maintainable and practical technical
+                    solutions.
                 </p>
 
                 <p>
                     In my recent role at Ushur, I worked with enterprise
                     customers across Insurance, Healthcare and Financial
-                    Services, focusing on AI-led use cases, automation,
-                    integrations, platform migration and technical
-                    architecture.
+                    Services, leading solution design, integrations,
+                    platform modernization, automation, AI initiatives,
+                    UAT and production delivery.
                 </p>
 
                 <p>
-                    Earlier in my career, I built payment and enterprise
-                    software, led solution and QA teams, developed REST APIs,
-                    worked with AWS infrastructure and solved production
-                    engineering challenges at scale.
+                    My engineering background includes
+                    <strong>Python, JavaScript, PHP/Laravel, REST APIs,
+                    microservices, AWS, Azure, GCP, databases, payment
+                    systems and cloud-native application design.</strong>
                 </p>
 
                 <p>
-                    Today, I am particularly interested in
-                    <strong>AI Engineering, Solution Architecture,
-                    Generative AI, Agentic AI, Technical Consulting and
-                    Forward-Deployed Engineering</strong>.
+                    More recently, I have focused on
+                    <strong>Generative AI, LLMs, RAG, Agentic AI,
+                    prompt engineering and AI-powered enterprise
+                    workflows</strong>, with an emphasis on integrating AI
+                    into real production systems rather than treating it as
+                    an isolated experiment.
                 </p>
 
             </div>
@@ -853,17 +1053,12 @@
 
                 <div class="highlight">
                     <strong>10+</strong>
-                    <span>Years of Software Engineering & Consulting</span>
+                    <span>Years across Software Engineering & Technical Consulting</span>
                 </div>
 
                 <div class="highlight">
                     <strong>AI</strong>
-                    <span>LLMs • RAG • Agentic AI • Automation</span>
-                </div>
-
-                <div class="highlight">
-                    <strong>25%</strong>
-                    <span>SoW Growth through AI-led opportunities</span>
+                    <span>LLMs • RAG • Agentic AI • Generative AI</span>
                 </div>
 
                 <div class="highlight">
@@ -871,6 +1066,21 @@
                     <span>Payment solutions delivered at Simpl</span>
                 </div>
 
+                <div class="highlight">
+                    <strong>25%</strong>
+                    <span>Increase in Scope of Work through AI-led opportunities</span>
+                </div>
+
+                <div class="highlight">
+                    <strong>120+</strong>
+                    <span>Hours saved monthly through automation</span>
+                </div>
+
+                <div class="highlight">
+                    <strong>Cloud</strong>
+                    <span>AWS • Azure • GCP • Cloud-native Architecture</span>
+                </div>
+
             </div>
 
         </div>
@@ -881,50 +1091,65 @@
 
 
 <!-- =========================
-     EDUCATION
+     ARCHITECTURE
 ========================= -->
 
-<section id="education">
+<section id="architecture" class="architecture-section">
 
     <div class="container">
 
         <div class="section-header">
 
-            <div class="label">Education</div>
+            <div class="label">Solution Architecture</div>
 
             <h2>
-                Academic Foundation
+                From requirements to scalable technical architecture.
             </h2>
+
+            <p>
+                I combine software engineering depth with architecture,
+                integration and customer-facing consulting to design
+                solutions that can move from whiteboard to production.
+            </p>
 
         </div>
 
-        <div class="education-card">
+        <div class="architecture-grid">
 
-            <div>
-
-                <h3>
-                    Maulana Abul Kalam Azad University of Technology (WBUT)
-                </h3>
-
-                <div class="degree">
-                    Bachelor of Technology — Computer Science and Engineering
-                </div>
-
+            <div class="architecture-card">
+                <div class="architecture-icon">01</div>
+                <h3>Architecture Design</h3>
                 <p>
-                    West Bengal, India
+                    Translate business requirements into scalable,
+                    maintainable and production-ready solution architectures.
                 </p>
-
-                <p style="margin-top: 8px;">
-                    Engineering education in Computer Science and Engineering,
-                    providing the technical foundation for my career in
-                    software engineering, application development,
-                    architecture and technology.
-                </p>
-
             </div>
 
-            <div class="education-year">
-                2012 – 2016
+            <div class="architecture-card">
+                <div class="architecture-icon">02</div>
+                <h3>Software Engineering</h3>
+                <p>
+                    Hands-on experience building APIs, backend services,
+                    automation, integrations and enterprise applications.
+                </p>
+            </div>
+
+            <div class="architecture-card">
+                <div class="architecture-icon">03</div>
+                <h3>Cloud & Integration</h3>
+                <p>
+                    Design API, SFTP, identity, data and cloud integration
+                    patterns across AWS, Azure and GCP environments.
+                </p>
+            </div>
+
+            <div class="architecture-card">
+                <div class="architecture-icon">04</div>
+                <h3>AI Engineering</h3>
+                <p>
+                    Apply LLM, RAG and Agentic AI patterns to enterprise
+                    workflows, automation and customer-facing solutions.
+                </p>
             </div>
 
         </div>
@@ -935,7 +1160,7 @@
 
 
 <!-- =========================
-     CAREER METRICS
+     METRICS
 ========================= -->
 
 <section class="metrics">
@@ -943,13 +1168,8 @@
     <div class="container">
 
         <div class="section-header">
-
             <div class="label">Impact</div>
-
-            <h2>
-                Results I've delivered
-            </h2>
-
+            <h2>Engineering and business outcomes.</h2>
         </div>
 
         <div class="metrics-grid">
@@ -971,7 +1191,7 @@
 
             <div class="metric">
                 <strong>80%</strong>
-                <span>Improvement in merchant adoption through A/B testing</span>
+                <span>Improvement in merchant adoption through experimentation</span>
             </div>
 
         </div>
@@ -994,13 +1214,13 @@
             <div class="label">Technical Expertise</div>
 
             <h2>
-                Technology I work with
+                Software engineering + architecture + AI.
             </h2>
 
             <p>
-                A combination of engineering, cloud, AI, integration and
-                consulting capabilities built through hands-on enterprise
-                delivery.
+                A cross-functional technology stack built through hands-on
+                engineering, enterprise solution delivery and technical
+                consulting.
             </p>
 
         </div>
@@ -1009,32 +1229,17 @@
 
             <div class="skill-card">
 
-                <h3>AI & Automation</h3>
+                <h3>Solution Architecture</h3>
 
                 <div class="tags">
-                    <span class="tag">Generative AI</span>
-                    <span class="tag">Agentic AI</span>
-                    <span class="tag">LLMs</span>
-                    <span class="tag">RAG</span>
-                    <span class="tag">Prompt Engineering</span>
-                    <span class="tag">AI Workflows</span>
-                    <span class="tag">Python</span>
-                </div>
-
-            </div>
-
-            <div class="skill-card">
-
-                <h3>Architecture & Cloud</h3>
-
-                <div class="tags">
-                    <span class="tag">AWS</span>
-                    <span class="tag">Azure</span>
-                    <span class="tag">GCP</span>
+                    <span class="tag">Solution Architecture</span>
+                    <span class="tag">Enterprise Architecture</span>
+                    <span class="tag">System Design</span>
+                    <span class="tag">Cloud Architecture</span>
                     <span class="tag">Microservices</span>
-                    <span class="tag">REST APIs</span>
-                    <span class="tag">Cloud-native Design</span>
-                    <span class="tag">Infrastructure Migration</span>
+                    <span class="tag">API Architecture</span>
+                    <span class="tag">Integration Design</span>
+                    <span class="tag">Technical Consulting</span>
                 </div>
 
             </div>
@@ -1049,25 +1254,43 @@
                     <span class="tag">Node.js</span>
                     <span class="tag">PHP</span>
                     <span class="tag">Laravel</span>
-                    <span class="tag">Pandas</span>
                     <span class="tag">REST APIs</span>
+                    <span class="tag">Pandas</span>
+                    <span class="tag">Backend Engineering</span>
                 </div>
 
             </div>
 
             <div class="skill-card">
 
-                <h3>Tools & Platforms</h3>
+                <h3>AI Engineering</h3>
 
                 <div class="tags">
-                    <span class="tag">Grafana</span>
+                    <span class="tag">Generative AI</span>
+                    <span class="tag">LLMs</span>
+                    <span class="tag">RAG</span>
+                    <span class="tag">Agentic AI</span>
+                    <span class="tag">AI Agents</span>
+                    <span class="tag">Prompt Engineering</span>
+                    <span class="tag">AI Workflows</span>
+                    <span class="tag">LLM Applications</span>
+                </div>
+
+            </div>
+
+            <div class="skill-card">
+
+                <h3>Cloud & Platforms</h3>
+
+                <div class="tags">
+                    <span class="tag">AWS</span>
+                    <span class="tag">Azure</span>
+                    <span class="tag">GCP</span>
+                    <span class="tag">AWS Cognito</span>
+                    <span class="tag">AWS RDS</span>
                     <span class="tag">AWS OpenSearch</span>
-                    <span class="tag">MySQL</span>
-                    <span class="tag">NoSQL</span>
-                    <span class="tag">Postman</span>
-                    <span class="tag">Miro</span>
-                    <span class="tag">Cursor</span>
-                    <span class="tag">Claude Code</span>
+                    <span class="tag">SFTP</span>
+                    <span class="tag">Grafana</span>
                 </div>
 
             </div>
@@ -1089,16 +1312,16 @@
 
         <div class="section-header">
 
-            <div class="label">Featured Projects</div>
+            <div class="label">Featured Engineering Work</div>
 
             <h2>
-                Recent technical work
+                Building systems, automations and AI solutions.
             </h2>
 
             <p>
-                Selected examples of hands-on engineering, AI,
-                automation, architecture, integration and production
-                problem solving.
+                Selected projects demonstrating solution architecture,
+                software engineering, cloud integration, AI engineering and
+                production problem solving.
             </p>
 
         </div>
@@ -1107,53 +1330,39 @@
 
             <article class="project-card">
 
-                <div class="project-number">
-                    PROJECT 01
-                </div>
+                <div class="project-number">PROJECT 01</div>
 
                 <h3>
-                    Python-Based Agentic AI Reporting Automation
+                    Python-Based AI Reporting Automation
                 </h3>
 
                 <p>
-                    At Ushur, I prototyped a Python-based reporting solution
-                    that aggregated information across multiple APIs and
-                    transformed it into customer-specific reports.
+                    Designed a Python-based automation solution to collect
+                    information from multiple APIs, consolidate data, apply
+                    customer-specific business rules and generate automated
+                    reports.
                 </p>
 
                 <p>
-                    The solution addressed a common enterprise problem:
-                    important information was distributed across independent
-                    systems, requiring manual data collection, consolidation
-                    and business-rule processing.
-                </p>
-
-                <p>
-                    I designed the technical approach using Python API
-                    integrations and data processing, while applying
-                    concurrent execution for independent API calls. The
-                    automation helped accelerate delivery timelines from
-                    approximately one month to two weeks.
+                    I designed the end-to-end technical approach and used
+                    concurrent execution for independent API calls, reducing
+                    manual data collection and accelerating delivery.
                 </p>
 
                 <div class="architecture">
                     <strong>Architecture:</strong>
-                    Multiple REST APIs →
-                    Concurrent Python Data Collection →
-                    Data Transformation →
-                    Business Rules →
-                    Automated Report
+                    REST APIs → Concurrent Python Processing →
+                    Data Transformation → Business Rules →
+                    Automated Reporting
                 </div>
-
-                <br>
 
                 <div class="project-meta">
                     <span>Python</span>
                     <span>REST APIs</span>
                     <span>Pandas</span>
-                    <span>Agentic AI</span>
                     <span>Automation</span>
-                    <span>Reporting</span>
+                    <span>AI</span>
+                    <span>Data Processing</span>
                 </div>
 
             </article>
@@ -1161,45 +1370,29 @@
 
             <article class="project-card">
 
-                <div class="project-number">
-                    PROJECT 02
-                </div>
+                <div class="project-number">PROJECT 02</div>
 
                 <h3>
-                    Azure AD B2C → AWS Cognito SSO
+                    Azure AD B2C → AWS Cognito Enterprise SSO
                 </h3>
 
                 <p>
-                    Worked on an enterprise authentication integration where
-                    Azure AD B2C served as the identity provider and AWS
-                    Cognito provided the application-facing authentication
-                    layer.
+                    Worked on an enterprise identity architecture integrating
+                    Azure AD B2C with AWS Cognito for secure application
+                    authentication.
                 </p>
 
                 <p>
-                    My work involved understanding the end-to-end identity
-                    flow, configuration, attribute and claim mapping,
+                    My responsibilities included understanding the end-to-end
+                    identity flow, configuration, claim and attribute mapping,
                     troubleshooting and supporting UAT.
                 </p>
 
-                <p>
-                    A significant part of the work involved investigating
-                    how identity claims were generated, transferred and
-                    consumed by the application to ensure that user
-                    information remained accurate throughout the flow.
-                </p>
-
                 <div class="architecture">
-                    <strong>Authentication Flow:</strong>
-                    User →
-                    Application →
-                    AWS Cognito →
-                    Azure AD B2C →
-                    Token / Claims →
-                    Application
+                    <strong>Authentication Architecture:</strong>
+                    User → Application → AWS Cognito →
+                    Azure AD B2C → Tokens / Claims → Application
                 </div>
-
-                <br>
 
                 <div class="project-meta">
                     <span>Azure AD B2C</span>
@@ -1207,7 +1400,7 @@
                     <span>OIDC</span>
                     <span>OAuth 2.0</span>
                     <span>JWT</span>
-                    <span>AWS</span>
+                    <span>Cloud Architecture</span>
                 </div>
 
             </article>
@@ -1215,60 +1408,45 @@
 
             <article class="project-card">
 
-                <div class="project-number">
-                    PROJECT 03
-                </div>
+                <div class="project-number">PROJECT 03</div>
 
                 <h3>
                     Enterprise Payment Platform & Merchant Solutions
                 </h3>
 
                 <p>
-                    At Simpl, I led Solution and QA teams responsible for
-                    delivering scalable payment solutions for enterprise
-                    merchants.
+                    Led Solution and QA teams at Simpl responsible for
+                    enterprise merchant integrations and scalable payment
+                    solutions.
                 </p>
 
                 <p>
-                    I worked across payment integrations, APIs, merchant
-                    requirements, technical troubleshooting, solution
-                    delivery and production support. The team delivered
-                    more than <strong>100 payment solutions</strong>
-                    representing more than <strong>₹50 Cr+ TPV</strong>.
+                    Delivered more than <strong>100 payment solutions</strong>
+                    representing <strong>₹50 Cr+ TPV</strong>, while working
+                    across APIs, integrations, technical troubleshooting,
+                    automation and production support.
                 </p>
 
                 <p>
-                    I also worked on process automation and developed
-                    high-performance APIs and a Python QA framework that
-                    automated invoicing activities and saved more than
-                    <strong>120 hours per month</strong>.
-                </p>
-
-                <p>
-                    Through experimentation and A/B testing, I helped improve
-                    merchant adoption by <strong>80%</strong> while reducing
-                    churn by <strong>22%</strong>.
+                    Built Python automation that saved more than
+                    <strong>120 hours per month</strong> and contributed to
+                    experimentation that improved merchant adoption.
                 </p>
 
                 <div class="architecture">
-                    <strong>Focus:</strong>
-                    Payment APIs →
-                    Merchant Integration →
-                    Transaction Processing →
-                    QA Automation →
-                    Monitoring →
-                    Production Support
+                    <strong>Architecture Focus:</strong>
+                    Payment APIs → Merchant Integration →
+                    Transaction Processing → QA Automation →
+                    Monitoring → Production Support
                 </div>
-
-                <br>
 
                 <div class="project-meta">
                     <span>Payment APIs</span>
-                    <span>REST APIs</span>
                     <span>Python</span>
                     <span>JavaScript</span>
-                    <span>QA Automation</span>
                     <span>Microservices</span>
+                    <span>QA Automation</span>
+                    <span>REST APIs</span>
                 </div>
 
             </article>
@@ -1276,54 +1454,40 @@
 
             <article class="project-card">
 
-                <div class="project-number">
-                    PROJECT 04
-                </div>
+                <div class="project-number">PROJECT 04</div>
 
                 <h3>
-                    Secure Digital Marketplace & Cloud Infrastructure
+                    Secure Digital Marketplace & Cloud Architecture
                 </h3>
 
                 <p>
-                    During my experience with eSmart Vehicles and Hilton
-                    Software, I spearheaded the engineering of a secure
-                    digital marketplace from the ground up.
+                    Spearheaded engineering of a secure digital marketplace,
+                    contributing to application architecture, backend
+                    development and RESTful API design.
                 </p>
 
                 <p>
-                    I was involved in application architecture, backend
-                    development and RESTful API design, helping establish
-                    the technical foundation of the product.
+                    Worked on AWS infrastructure optimization, migrated
+                    infrastructure to AWS RDS and optimized AWS OpenSearch
+                    to meet a sub-one-second SLA.
                 </p>
 
                 <p>
-                    I also worked on AWS infrastructure, optimizing AWS
-                    OpenSearch to meet a sub-one-second SLA and migrating
-                    infrastructure to AWS RDS.
-                </p>
-
-                <p>
-                    The platform included multiple payment gateways,
-                    requiring governance and integration across providers
-                    such as Stripe, PayPal and BitPay.
+                    Integrated multiple payment providers including Stripe,
+                    PayPal and BitPay.
                 </p>
 
                 <div class="architecture">
-                    <strong>Focus:</strong>
-                    Digital Marketplace →
-                    REST APIs →
-                    AWS Infrastructure →
-                    OpenSearch →
-                    RDS →
-                    Multi-Gateway Payments
+                    <strong>Architecture:</strong>
+                    Digital Marketplace → REST APIs →
+                    AWS Infrastructure → OpenSearch →
+                    RDS → Payment Gateways
                 </div>
-
-                <br>
 
                 <div class="project-meta">
                     <span>AWS</span>
-                    <span>OpenSearch</span>
                     <span>RDS</span>
+                    <span>OpenSearch</span>
                     <span>REST APIs</span>
                     <span>Stripe</span>
                     <span>PayPal</span>
@@ -1335,51 +1499,37 @@
 
             <article class="project-card">
 
-                <div class="project-number">
-                    PROJECT 05
-                </div>
+                <div class="project-number">PROJECT 05</div>
 
                 <h3>
-                    Enterprise Modules & Multi-Gateway Payments
+                    Enterprise Software Modules & Payment Integrations
                 </h3>
 
                 <p>
-                    At Globussoft Technologies, I worked as a Software
-                    Engineer building foundational product capabilities
-                    and enterprise modules.
+                    Built foundational enterprise application capabilities
+                    as a Software Engineer, developing backend functionality
+                    and database-driven modules using PHP and Laravel.
                 </p>
 
                 <p>
-                    I developed core functionality from scratch and worked
-                    on payment integrations supporting multiple gateways,
-                    including Stripe, PayPal and Bitcoin.
-                </p>
-
-                <p>
-                    This role established my foundation in backend
-                    application development, database-driven systems and
-                    payment technology using Laravel, PHP and Eloquent ORM.
+                    Implemented multiple payment gateway integrations and
+                    developed hands-on expertise in backend engineering,
+                    APIs, application architecture and payment systems.
                 </p>
 
                 <div class="architecture">
-                    <strong>Focus:</strong>
-                    Enterprise Modules →
-                    Laravel →
-                    Eloquent ORM →
-                    Payment APIs →
+                    <strong>Engineering Stack:</strong>
+                    Laravel → Eloquent ORM →
+                    Backend Services → Payment APIs →
                     Stripe / PayPal / Bitcoin
                 </div>
-
-                <br>
 
                 <div class="project-meta">
                     <span>PHP</span>
                     <span>Laravel</span>
                     <span>Eloquent ORM</span>
                     <span>REST APIs</span>
-                    <span>Stripe</span>
-                    <span>PayPal</span>
-                    <span>Bitcoin</span>
+                    <span>Payment Systems</span>
                 </div>
 
             </article>
@@ -1387,45 +1537,29 @@
 
             <article class="project-card">
 
-                <div class="project-number">
-                    PROJECT 06
-                </div>
+                <div class="project-number">PROJECT 06</div>
 
                 <h3>
-                    AI-Powered Enterprise Automation
+                    Generative AI & Agentic Enterprise Automation
                 </h3>
 
                 <p>
-                    My recent AI work focuses on applying Generative AI,
-                    LLMs, RAG and Agentic AI patterns to real enterprise
-                    workflows.
+                    Designed and explored AI-powered enterprise workflows
+                    using Generative AI, LLMs, RAG and Agentic AI patterns.
                 </p>
 
                 <p>
-                    Rather than treating AI as a standalone experiment,
-                    I focus on integrating AI capabilities with existing
-                    enterprise applications, APIs, business rules and
-                    operational workflows.
-                </p>
-
-                <p>
-                    My work includes exploring AI agents, retrieval-augmented
-                    generation, prompt engineering and Python-based
-                    automation for information retrieval, decision support
-                    and workflow acceleration.
+                    My approach focuses on connecting AI capabilities with
+                    enterprise data, APIs, business rules and operational
+                    workflows to create useful production-oriented systems.
                 </p>
 
                 <div class="architecture">
-                    <strong>Pattern:</strong>
-                    Enterprise Data →
-                    Retrieval →
-                    LLM →
-                    Reasoning / Agent →
-                    Business Workflow →
-                    Action / Outcome
+                    <strong>AI Architecture:</strong>
+                    Enterprise Data → Retrieval →
+                    LLM → Agent / Reasoning →
+                    Business Rules → Workflow → Action
                 </div>
-
-                <br>
 
                 <div class="project-meta">
                     <span>Generative AI</span>
@@ -1455,18 +1589,14 @@
 
         <div class="section-header">
 
-            <div class="label">
-                Production Engineering
-            </div>
+            <div class="label">Production Engineering</div>
 
-            <h2>
-                Pay in 3 — High-Impact Merchant Incident
-            </h2>
+            <h2>Ownership under production pressure.</h2>
 
             <p>
-                A production incident demonstrating ownership, technical
-                troubleshooting, customer communication and rapid
-                mitigation.
+                A real-world payment incident demonstrating technical
+                troubleshooting, leadership, customer communication and
+                rapid mitigation.
             </p>
 
         </div>
@@ -1474,7 +1604,7 @@
         <div class="incident-card">
 
             <h3>
-                Restoring a critical payment flow under pressure
+                Pay in 3 — High-Impact Merchant Incident
             </h3>
 
             <div class="incident-grid">
@@ -1491,16 +1621,16 @@
                 <div class="incident-step">
                     <strong>Ownership</strong>
                     <p>
-                        As the technical lead, I took ownership of the
-                        incident, coordinated the team and focused first on
-                        minimizing merchant and customer impact.
+                        As technical lead, I took ownership, coordinated the
+                        engineering team and prioritized minimizing customer
+                        and merchant impact.
                     </p>
                 </div>
 
                 <div class="incident-step">
                     <strong>Immediate Mitigation</strong>
                     <p>
-                        We temporarily disabled the affected payment option
+                        Temporarily disabled the affected payment option
                         through merchant configuration while keeping other
                         payment methods available.
                     </p>
@@ -1509,27 +1639,25 @@
                 <div class="incident-step">
                     <strong>Investigation</strong>
                     <p>
-                        I worked with the team to troubleshoot the payment
-                        flow, isolate the failure and identify the issue in
-                        the merchant-side implementation.
+                        Worked with the team to trace the payment flow,
+                        isolate the failure and identify the implementation
+                        issue.
                     </p>
                 </div>
 
                 <div class="incident-step">
                     <strong>Resolution</strong>
                     <p>
-                        I coordinated the technical fix, validated the
-                        payment flow and monitored the system after the
-                        production deployment.
+                        Coordinated the technical fix, validated the payment
+                        journey and monitored the system after deployment.
                     </p>
                 </div>
 
                 <div class="incident-step">
                     <strong>Aftercare</strong>
                     <p>
-                        I supported RCA and follow-up actions focused on
-                        monitoring, alerts and preventive measures to reduce
-                        the likelihood of recurrence.
+                        Supported RCA and follow-up actions around monitoring,
+                        alerts and preventive engineering measures.
                     </p>
                 </div>
 
@@ -1552,99 +1680,92 @@
 
         <div class="section-header">
 
-            <div class="label">
-                Experience
-            </div>
+            <div class="label">Professional Experience</div>
 
             <h2>
-                Professional Journey
+                From Software Engineer to Solution Architect.
             </h2>
 
             <p>
-                A decade-long progression from software engineering into
-                technical leadership, enterprise architecture and AI-driven
-                solution consulting.
+                A decade-long progression across software engineering,
+                technical leadership, enterprise solution architecture,
+                cloud integrations and AI.
             </p>
 
         </div>
-
 
         <div class="timeline">
 
             <div class="timeline-item">
 
-                <h3>
-                    Lead Technical Consultant
-                </h3>
+                <h3>Lead Technical Consultant</h3>
 
-                <div class="company">
-                    Ushur
-                </div>
+                <div class="company">Ushur</div>
 
-                <div class="date">
-                    Sep 2024 – May 2026
-                </div>
+                <div class="date">Sep 2024 – May 2026</div>
 
                 <p class="role-summary">
                     Led enterprise solution architecture and technical
-                    consulting for global customers across Insurance,
-                    Healthcare and Financial Services.
+                    consulting for customers across Insurance, Healthcare
+                    and Financial Services.
                 </p>
 
                 <ul>
 
                     <li>
-                        <strong>Enterprise Architecture:</strong>
-                        Directed end-to-end solution architecture, translating
-                        customer requirements into scalable technical
-                        solutions and workflows.
+                        <strong>Solution Architecture:</strong>
+                        Led end-to-end solution design, translating business
+                        requirements into scalable technical architectures
+                        and workflows.
                     </li>
 
                     <li>
-                        <strong>AI & Innovation:</strong>
-                        Identified and prototyped AI-led use cases and
-                        developed a Python-based Agentic AI reporting solution
-                        that aggregated data across APIs.
+                        <strong>AI Engineering:</strong>
+                        Identified and prototyped Generative AI, LLM,
+                        RAG and Agentic AI use cases for enterprise workflows.
                     </li>
 
                     <li>
-                        <strong>Business Impact:</strong>
-                        Contributed to a <strong>25% increase in Scope of
-                        Work</strong> through strategic analysis and
-                        identification of AI-led opportunities.
+                        <strong>Software Engineering:</strong>
+                        Built Python automation and API-based solutions for
+                        enterprise reporting and operational workflows.
                     </li>
 
                     <li>
-                        <strong>Automation:</strong>
-                        Engineered automation and testing capabilities that
-                        reduced manual regression effort by approximately
-                        <strong>20 hours per week</strong>.
+                        <strong>Cloud & Integration:</strong>
+                        Worked with API, SFTP, SSO and cloud integration
+                        patterns across enterprise systems.
                     </li>
 
                     <li>
-                        <strong>Platform Transformation:</strong>
-                        Spearheaded a <strong>50% legacy-to-Studio platform
-                        migration</strong>, helping customers modernize
-                        existing workflows.
+                        <strong>Architecture Documentation:</strong>
+                        Created solution designs, technical documentation,
+                        Miro/draw.io architecture diagrams and implementation
+                        plans.
+                    </li>
+
+                    <li>
+                        <strong>Platform Modernization:</strong>
+                        Supported legacy workflow migration to the Ushur
+                        Studio platform.
                     </li>
 
                     <li>
                         <strong>Observability:</strong>
-                        Implemented real-time Grafana dashboards to support
-                        proactive monitoring and issue resolution.
+                        Implemented Grafana dashboards for proactive monitoring
+                        and operational troubleshooting.
                     </li>
 
                     <li>
-                        <strong>Cloud & Integrations:</strong>
-                        Worked on enterprise capabilities including SSO
-                        integration, API rate limiting and cloud-based
-                        integrations.
+                        <strong>Business Impact:</strong>
+                        Contributed to a 25% increase in Scope of Work through
+                        strategic identification of AI-led opportunities.
                     </li>
 
                     <li>
                         <strong>Technical Leadership:</strong>
-                        Collaborated with product, engineering and customer
-                        teams and supported partner enablement initiatives.
+                        Collaborated with product, engineering, delivery and
+                        customer teams while mentoring technical consultants.
                     </li>
 
                 </ul>
@@ -1654,68 +1775,52 @@
 
             <div class="timeline-item">
 
-                <h3>
-                    Lead Solution Engineer
-                </h3>
+                <h3>Lead Solution Engineer</h3>
 
-                <div class="company">
-                    Simpl
-                </div>
+                <div class="company">Simpl</div>
 
-                <div class="date">
-                    Mar 2023 – Sep 2024
-                </div>
+                <div class="date">Mar 2023 – Sep 2024</div>
 
                 <p class="role-summary">
                     Led Solution and QA teams delivering scalable payment
-                    solutions and merchant integrations for enterprise
-                    customers.
+                    solutions and enterprise merchant integrations.
                 </p>
 
                 <ul>
 
                     <li>
+                        <strong>Solution Engineering:</strong>
+                        Designed and delivered scalable payment solutions
+                        based on merchant requirements and integration needs.
+                    </li>
+
+                    <li>
+                        <strong>Software Engineering:</strong>
+                        Developed high-performance APIs and backend services
+                        supporting payment workflows.
+                    </li>
+
+                    <li>
                         <strong>Delivery Leadership:</strong>
-                        Managed Solution and QA teams delivering more than
-                        <strong>100 scalable payment solutions</strong>
-                        representing <strong>₹50 Cr+ TPV</strong>.
-                    </li>
-
-                    <li>
-                        <strong>Merchant Success:</strong>
-                        Supported solutions contributing to
-                        <strong>75% merchant retention</strong>.
-                    </li>
-
-                    <li>
-                        <strong>API Engineering:</strong>
-                        Developed high-performance APIs supporting payment
-                        workflows and merchant integrations.
+                        Led teams responsible for more than 100 payment
+                        solutions representing ₹50 Cr+ TPV.
                     </li>
 
                     <li>
                         <strong>Automation:</strong>
-                        Built a Python QA framework and automated invoicing
-                        workflows, saving more than
-                        <strong>120 hours per month</strong>.
+                        Built Python QA automation and automated invoicing
+                        workflows, saving more than 120 hours per month.
                     </li>
 
                     <li>
                         <strong>Product Optimization:</strong>
-                        Implemented A/B testing that improved merchant
-                        adoption by <strong>80%</strong>.
-                    </li>
-
-                    <li>
-                        <strong>Business Impact:</strong>
-                        Helped reduce merchant churn by
-                        <strong>22%</strong> through product and solution
-                        optimization.
+                        Used A/B testing and experimentation to improve
+                        merchant adoption.
                     </li>
 
                     <li>
                         <strong>Production Engineering:</strong>
-                        Worked on payment incidents, troubleshooting,
+                        Handled payment incidents, technical troubleshooting,
                         merchant escalations and production support.
                     </li>
 
@@ -1726,17 +1831,11 @@
 
             <div class="timeline-item">
 
-                <h3>
-                    Senior Software Engineer / Lead
-                </h3>
+                <h3>Senior Software Engineer / Lead</h3>
 
-                <div class="company">
-                    eSmart Vehicles & Hilton Software
-                </div>
+                <div class="company">eSmart Vehicles & Hilton Software</div>
 
-                <div class="date">
-                    2017 – 2023
-                </div>
+                <div class="date">2017 – 2023</div>
 
                 <p class="role-summary">
                     Progressed into senior engineering and leadership roles
@@ -1747,39 +1846,38 @@
                 <ul>
 
                     <li>
-                        <strong>Product Engineering:</strong>
-                        Spearheaded the engineering of a secure digital
-                        marketplace from the ground up.
+                        <strong>Software Engineering:</strong>
+                        Built secure digital products and enterprise
+                        application functionality.
                     </li>
 
                     <li>
-                        <strong>Architecture:</strong>
-                        Led application architecture and designed RESTful
-                        APIs supporting core product functionality.
+                        <strong>System Design:</strong>
+                        Contributed to application architecture and REST API
+                        design.
                     </li>
 
                     <li>
-                        <strong>AWS Infrastructure:</strong>
+                        <strong>AWS:</strong>
                         Worked on cloud infrastructure optimization and
-                        migrated infrastructure to AWS RDS.
+                        migration to AWS RDS.
                     </li>
 
                     <li>
-                        <strong>Search Engineering:</strong>
-                        Optimized AWS OpenSearch to meet a
-                        <strong>sub-one-second SLA</strong>.
+                        <strong>Performance Engineering:</strong>
+                        Optimized AWS OpenSearch to meet a sub-one-second SLA.
                     </li>
 
                     <li>
-                        <strong>Payments:</strong>
-                        Engineered multi-gateway payment integrations and
-                        governance across Stripe, PayPal and BitPay.
+                        <strong>Payment Engineering:</strong>
+                        Integrated and governed multiple payment gateways
+                        including Stripe, PayPal and BitPay.
                     </li>
 
                     <li>
                         <strong>Technical Leadership:</strong>
-                        Took ownership of engineering initiatives while
-                        mentoring and guiding development activities.
+                        Led engineering initiatives and supported development
+                        team activities.
                     </li>
 
                 </ul>
@@ -1789,31 +1887,19 @@
 
             <div class="timeline-item">
 
-                <h3>
-                    Software Engineer
-                </h3>
+                <h3>Software Engineer</h3>
 
-                <div class="company">
-                    Globussoft Technologies
-                </div>
+                <div class="company">Globussoft Technologies</div>
 
-                <div class="date">
-                    2016 – 2017
-                </div>
+                <div class="date">2016 – 2017</div>
 
                 <p class="role-summary">
-                    Built foundational enterprise application features and
-                    payment integrations while developing core backend
-                    engineering expertise.
+                    Started my professional software engineering career
+                    building enterprise application modules and payment
+                    integrations.
                 </p>
 
                 <ul>
-
-                    <li>
-                        <strong>Application Development:</strong>
-                        Built core enterprise modules and product features
-                        from scratch.
-                    </li>
 
                     <li>
                         <strong>Backend Engineering:</strong>
@@ -1822,20 +1908,76 @@
                     </li>
 
                     <li>
+                        <strong>Application Development:</strong>
+                        Built core enterprise modules and product features.
+                    </li>
+
+                    <li>
                         <strong>Payment Integrations:</strong>
-                        Implemented multi-gateway payment integrations
-                        including Stripe, PayPal and Bitcoin.
+                        Implemented integrations with Stripe, PayPal and
+                        Bitcoin.
                     </li>
 
                     <li>
                         <strong>Engineering Foundation:</strong>
-                        Developed hands-on experience in backend development,
-                        APIs, database-driven applications and payment
-                        systems.
+                        Built hands-on expertise in backend development,
+                        APIs, databases and payment systems.
                     </li>
 
                 </ul>
 
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education" class="education">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="label">Education</div>
+
+            <h2>Computer Science foundation.</h2>
+
+        </div>
+
+        <div class="education-card">
+
+            <div>
+
+                <h3>
+                    Maulana Abul Kalam Azad University of Technology (WBUT)
+                </h3>
+
+                <div class="degree">
+                    Bachelor of Technology — Computer Science and Engineering
+                </div>
+
+                <p>
+                    West Bengal, India
+                </p>
+
+                <p style="margin-top: 8px;">
+                    Engineering education in Computer Science and Engineering,
+                    providing the foundation for my career in software
+                    engineering, application development, system design,
+                    architecture and technology.
+                </p>
+
+            </div>
+
+            <div class="education-year">
+                2012 – 2016
             </div>
 
         </div>
@@ -1855,18 +1997,13 @@
 
         <div class="section-header">
 
-            <div class="label">
-                Certifications
-            </div>
+            <div class="label">Certifications</div>
 
-            <h2>
-                Continuous Learning
-            </h2>
+            <h2>Continuous learning in AI and cloud.</h2>
 
             <p>
-                Professional certifications and continuous learning focused
-                on AI engineering, cloud technologies, LLMs and modern
-                application architecture.
+                Focused learning across modern AI engineering, cloud
+                technologies, LLM applications and Agentic AI.
             </p>
 
         </div>
@@ -1917,9 +2054,10 @@
         </h2>
 
         <p>
-            I'm interested in opportunities across AI Engineering,
-            Solution Architecture, Technical Consulting,
-            Software Engineering and Forward-Deployed Engineering.
+            I'm interested in opportunities across
+            <strong>Solution Architecture, Software Engineering,
+            AI Engineering, Technical Consulting, AI Solutions Architecture
+            and Forward-Deployed Engineering.</strong>
         </p>
 
         <div class="contact-links">
@@ -1957,10 +2095,48 @@
 <footer>
 
     <div class="container">
-        © 2026 Archana Kumari · Vancouver, Canada
+        © 2026 Archana Kumari · Vancouver, Canada ·
+        Solution Architect · Software Engineer · AI Engineer
     </div>
 
 </footer>
+
+
+<!-- =========================
+     SCROLL TO TOP
+========================= -->
+
+<button id="scrollTop"
+        aria-label="Scroll to top"
+        title="Back to top">
+    ↑
+</button>
+
+
+<script>
+
+    const scrollTopButton = document.getElementById("scrollTop");
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 450) {
+            scrollTopButton.classList.add("visible");
+        } else {
+            scrollTopButton.classList.remove("visible");
+        }
+
+    });
+
+    scrollTopButton.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+</script>
 
 </body>
 </html>
