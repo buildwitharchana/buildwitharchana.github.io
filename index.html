@@ -1,10 +1,1295 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Build with Archana</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Archana Kumari | Solution Architect & AI Engineer</title>
+
+    <meta name="description"
+          content="Archana Kumari — Solution Architect, Technical Consultant and AI Engineer specializing in cloud architecture, AI, automation, APIs and enterprise solutions.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            line-height: 1.6;
+            color: #172033;
+            background: #f8fafc;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        /* Navigation */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.94);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .nav-container {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #111827;
+        }
+
+        .logo span {
+            color: #6366f1;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            font-size: 0.92rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #6366f1;
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 110px 0 90px;
+            background:
+                radial-gradient(circle at top right, rgba(99,102,241,0.13), transparent 35%),
+                linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 7px 14px;
+            border-radius: 999px;
+            background: #eef2ff;
+            color: #4f46e5;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.7rem, 6vw, 5rem);
+            line-height: 1.05;
+            letter-spacing: -0.055em;
+            margin-bottom: 24px;
+            color: #111827;
+        }
+
+        .hero h1 span {
+            color: #6366f1;
+        }
+
+        .hero p {
+            max-width: 760px;
+            font-size: 1.15rem;
+            color: #5b6474;
+            margin-bottom: 34px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border-radius: 9px;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #111827;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid #d1d5db;
+            background: white;
+        }
+
+        .btn-secondary:hover {
+            border-color: #6366f1;
+            color: #6366f1;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            margin-bottom: 45px;
+        }
+
+        .section-header .label {
+            color: #6366f1;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            margin-bottom: 8px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            letter-spacing: -0.035em;
+            color: #111827;
+        }
+
+        .section-header p {
+            margin-top: 12px;
+            max-width: 720px;
+            color: #667085;
+        }
+
+        /* About */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+            color: #5b6474;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .highlight {
+            padding: 22px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+        }
+
+        .highlight strong {
+            display: block;
+            font-size: 1.6rem;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+
+        .highlight span {
+            font-size: 0.88rem;
+            color: #667085;
+        }
+
+        /* Skills */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 25px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .skill-card p {
+            color: #667085;
+            font-size: 0.88rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 6px 10px;
+            background: #f1f5f9;
+            border-radius: 6px;
+            font-size: 0.76rem;
+            font-weight: 600;
+            color: #475467;
+        }
+
+        /* Projects */
+
+        .projects {
+            background: white;
+        }
+
+        .project-grid {
+            display: grid;
+            gap: 25px;
+        }
+
+        .project-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            padding: 32px;
+            background: #ffffff;
+            transition: 0.25s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(15,23,42,0.08);
+        }
+
+        .project-number {
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: #6366f1;
+            letter-spacing: 0.08em;
+        }
+
+        .project-card h3 {
+            font-size: 1.45rem;
+            margin: 7px 0 14px;
+            color: #111827;
+        }
+
+        .project-card p {
+            color: #5b6474;
+            margin-bottom: 18px;
+            max-width: 900px;
+        }
+
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-meta span {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 6px 10px;
+            background: #eef2ff;
+            color: #4338ca;
+            border-radius: 6px;
+        }
+
+        .architecture {
+            margin-top: 20px;
+            padding: 15px 18px;
+            border-left: 3px solid #6366f1;
+            background: #f8fafc;
+            font-size: 0.88rem;
+            color: #475467;
+        }
+
+        /* Incident */
+
+        .incident-section {
+            background: #0f172a;
+            color: white;
+        }
+
+        .incident-section .section-header h2 {
+            color: white;
+        }
+
+        .incident-section .section-header p {
+            color: #cbd5e1;
+        }
+
+        .incident-card {
+            background: #172033;
+            border: 1px solid #26334a;
+            border-radius: 18px;
+            padding: 34px;
+        }
+
+        .incident-card h3 {
+            font-size: 1.45rem;
+            margin-bottom: 18px;
+        }
+
+        .incident-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .incident-step {
+            padding: 20px;
+            border: 1px solid #29364d;
+            border-radius: 12px;
+        }
+
+        .incident-step strong {
+            display: block;
+            color: #a5b4fc;
+            margin-bottom: 8px;
+        }
+
+        .incident-step p {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+        }
+
+        /* Experience */
+
+        .timeline {
+            border-left: 2px solid #e5e7eb;
+            padding-left: 28px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 38px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #6366f1;
+            left: -35px;
+            top: 8px;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.15rem;
+        }
+
+        .timeline-item .company {
+            color: #6366f1;
+            font-weight: 600;
+        }
+
+        .timeline-item .date {
+            font-size: 0.8rem;
+            color: #98a2b3;
+            margin: 5px 0 10px;
+        }
+
+        .timeline-item p {
+            color: #667085;
+        }
+
+        /* Certifications */
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .cert {
+            background: white;
+            border: 1px solid #e5e7eb;
+            padding: 18px 20px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* Contact */
+
+        .contact {
+            background: #f1f5f9;
+            text-align: center;
+        }
+
+        .contact-content {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .contact-content h2 {
+            font-size: 2.3rem;
+            margin-bottom: 14px;
+        }
+
+        .contact-content p {
+            color: #667085;
+            margin-bottom: 28px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 28px 0;
+            background: #111827;
+            color: #94a3b8;
+            text-align: center;
+            font-size: 0.82rem;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .about-grid,
+            .incident-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            section {
+                padding: 65px 0;
+            }
+
+            .hero {
+                padding: 75px 0 65px;
+            }
+
+            .skills-grid,
+            .about-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card,
+            .incident-card {
+                padding: 23px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Build with Archana</h1>
-    <p>My portfolio is coming soon! 🚀</p>
+
+<!-- Navigation -->
+
+<nav>
+    <div class="container nav-container">
+
+        <a href="#" class="logo">
+            Archana<span>.</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- Hero -->
+
+<header class="hero">
+
+    <div class="container hero-content">
+
+        <span class="eyebrow">
+            Solution Architect • AI Engineer • Technical Consultant
+        </span>
+
+        <h1>
+            Building scalable solutions at the intersection of
+            <span>Cloud, AI & Software.</span>
+        </h1>
+
+        <p>
+            I'm Archana Kumari, a software engineer and solution architect
+            with 10 years of experience designing enterprise solutions,
+            cloud integrations, automation frameworks and AI-powered
+            applications.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="btn btn-primary">
+                Explore My Work
+            </a>
+
+            <a href="https://www.linkedin.com/in/archana-kum"
+               target="_blank"
+               class="btn btn-secondary">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- About -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-header">
+            <div class="label">About</div>
+            <h2>Turning complex problems into practical solutions.</h2>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    I specialize in translating business requirements into
+                    scalable technical solutions across cloud platforms,
+                    APIs, automation, AI and enterprise applications.
+                </p>
+
+                <p>
+                    Throughout my career, I've worked closely with enterprise
+                    customers and cross-functional teams, owning solution
+                    architecture, implementation, technical troubleshooting,
+                    UAT and production delivery.
+                </p>
+
+                <p>
+                    My recent work has focused on Python automation,
+                    Agentic AI, RAG workflows, cloud identity integration,
+                    API-driven systems and reusable technical frameworks.
+                </p>
+
+            </div>
+
+            <div class="about-highlights">
+
+                <div class="highlight">
+                    <strong>10+</strong>
+                    <span>Years of Engineering & Consulting Experience</span>
+                </div>
+
+                <div class="highlight">
+                    <strong>Cloud</strong>
+                    <span>AWS • Azure • Google Cloud</span>
+                </div>
+
+                <div class="highlight">
+                    <strong>AI</strong>
+                    <span>LLMs • RAG • Agentic AI</span>
+                </div>
+
+                <div class="highlight">
+                    <strong>Enterprise</strong>
+                    <span>Architecture • Integration • Delivery</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Skills -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-header">
+            <div class="label">Technical Expertise</div>
+            <h2>Technology I work with</h2>
+        </div>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <h3>AI & Automation</h3>
+
+                <div class="tags">
+                    <span class="tag">Generative AI</span>
+                    <span class="tag">Agentic AI</span>
+                    <span class="tag">LLMs</span>
+                    <span class="tag">RAG</span>
+                    <span class="tag">Prompt Engineering</span>
+                    <span class="tag">Python</span>
+                </div>
+
+            </div>
+
+            <div class="skill-card">
+
+                <h3>Cloud & Architecture</h3>
+
+                <div class="tags">
+                    <span class="tag">AWS</span>
+                    <span class="tag">Azure</span>
+                    <span class="tag">GCP</span>
+                    <span class="tag">Lambda</span>
+                    <span class="tag">Cognito</span>
+                    <span class="tag">RDS</span>
+                    <span class="tag">S3</span>
+                </div>
+
+            </div>
+
+            <div class="skill-card">
+
+                <h3>Engineering</h3>
+
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">REST APIs</span>
+                    <span class="tag">Microservices</span>
+                    <span class="tag">Pandas</span>
+                </div>
+
+            </div>
+
+            <div class="skill-card">
+
+                <h3>Tools & Platforms</h3>
+
+                <div class="tags">
+                    <span class="tag">Flask</span>
+                    <span class="tag">OpenPyXL</span>
+                    <span class="tag">Grafana</span>
+                    <span class="tag">Postman</span>
+                    <span class="tag">Cursor AI</span>
+                    <span class="tag">Claude Code</span>
+                    <span class="tag">Miro</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Projects -->
+
+<section id="projects" class="projects">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="label">Featured Projects</div>
+
+            <h2>Recent technical work</h2>
+
+            <p>
+                A selection of projects demonstrating hands-on engineering,
+                architecture, automation, cloud integration and technical
+                problem solving.
+            </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+            <!-- Project 1 -->
+
+            <article class="project-card">
+
+                <div class="project-number">PROJECT 01</div>
+
+                <h3>Python-Based Customer Reporting Automation</h3>
+
+                <p>
+                    Designed and implemented an automated reporting solution
+                    that collected customer data from three independent REST
+                    APIs, transformed and consolidated the data, applied
+                    customer-specific business rules, and generated the final
+                    CSV report.
+                </p>
+
+                <p>
+                    I used Python Requests for API integration and Pandas for
+                    data transformation. Because the API calls were independent
+                    and primarily I/O-bound, I implemented
+                    <strong>ThreadPoolExecutor</strong> with configurable
+                    workers to execute requests concurrently.
+                </p>
+
+                <p>
+                    I also introduced execution-time tracking across different
+                    stages to identify bottlenecks and improve processing
+                    efficiency. Cursor AI was used as a development assistant
+                    for code generation and refactoring, while I owned the
+                    architecture, validation and business logic.
+                </p>
+
+                <div class="architecture">
+                    <strong>Architecture:</strong>
+                    REST APIs → Concurrent Python Data Collection →
+                    Pandas Transformation → Business Rules → CSV Report
+                </div>
+
+                <br>
+
+                <div class="project-meta">
+                    <span>Python</span>
+                    <span>Requests</span>
+                    <span>Pandas</span>
+                    <span>ThreadPoolExecutor</span>
+                    <span>REST APIs</span>
+                    <span>Automation</span>
+                </div>
+
+            </article>
+
+
+            <!-- Project 2 -->
+
+            <article class="project-card">
+
+                <div class="project-number">PROJECT 02</div>
+
+                <h3>Sun Life RFP Test Automation Tool</h3>
+
+                <p>
+                    Built an internal automation framework to validate Ushur
+                    extraction outputs against Sun Life's authoritative
+                    Master Keys Excel workbook.
+                </p>
+
+                <p>
+                    I designed the solution as a three-stage pipeline.
+                    Node.js scripts preprocess and normalize raw UDE JSON.
+                    A post-processing layer enriches the data with UDT case
+                    and census information and generates QPS-shaped JSON.
+                    A Python comparison engine then validates field presence
+                    and data-type consistency against the Master Keys.
+                </p>
+
+                <p>
+                    I created a Python orchestration layer to automate the
+                    complete workflow and exposed the solution through both
+                    a CLI and a local Flask web UI, allowing users to upload
+                    files, execute the pipeline and download the final
+                    Excel report.
+                </p>
+
+                <div class="architecture">
+                    <strong>Pipeline:</strong>
+                    UDE JSON → Node.js Preprocessing →
+                    UDT Enrichment → QPS JSON →
+                    Python Comparison Engine → Excel Report
+                </div>
+
+                <br>
+
+                <div class="project-meta">
+                    <span>Python</span>
+                    <span>Node.js</span>
+                    <span>Pandas</span>
+                    <span>OpenPyXL</span>
+                    <span>Flask</span>
+                    <span>CLI</span>
+                    <span>Automation</span>
+                </div>
+
+            </article>
+
+
+            <!-- Project 3 -->
+
+            <article class="project-card">
+
+                <div class="project-number">PROJECT 03</div>
+
+                <h3>Azure AD B2C → AWS Cognito SSO</h3>
+
+                <p>
+                    Worked on an enterprise SSO integration where Azure AD B2C
+                    acted as the identity provider while the AWS-hosted
+                    application used Amazon Cognito as the application-facing
+                    authentication layer.
+                </p>
+
+                <p>
+                    My responsibilities included integration design,
+                    configuration, attribute and claim mapping, token
+                    validation, troubleshooting and UAT support.
+                </p>
+
+                <p>
+                    A key technical focus was understanding how claims were
+                    generated by Azure AD B2C, mapped through Cognito and
+                    ultimately consumed by the application.
+                </p>
+
+                <div class="architecture">
+                    <strong>Authentication Flow:</strong>
+                    User → Application → AWS Cognito →
+                    Azure AD B2C → AWS Cognito → Application
+                </div>
+
+                <br>
+
+                <div class="project-meta">
+                    <span>Azure AD B2C</span>
+                    <span>AWS Cognito</span>
+                    <span>OIDC</span>
+                    <span>OAuth 2.0</span>
+                    <span>JWT</span>
+                    <span>Lambda</span>
+                    <span>CloudWatch</span>
+                </div>
+
+            </article>
+
+
+            <!-- Project 4 -->
+
+            <article class="project-card">
+
+                <div class="project-number">PROJECT 04</div>
+
+                <h3>Enterprise Payment Integration & Delivery</h3>
+
+                <p>
+                    At Simpl, I led solution and QA teams delivering scalable
+                    payment solutions for enterprise merchants. My work
+                    included payment integrations, API development,
+                    troubleshooting, merchant enablement and production
+                    support.
+                </p>
+
+                <p>
+                    I worked across multiple payment gateways and helped
+                    design solutions that balanced technical reliability,
+                    merchant requirements and business outcomes.
+                </p>
+
+                <p>
+                    This experience strengthened my ability to operate at the
+                    intersection of engineering, architecture, customer
+                    communication and production incident management.
+                </p>
+
+                <div class="architecture">
+                    <strong>Focus:</strong>
+                    Payment APIs → Merchant Integration →
+                    Transaction Processing → Monitoring →
+                    Production Support
+                </div>
+
+                <br>
+
+                <div class="project-meta">
+                    <span>Payment APIs</span>
+                    <span>REST APIs</span>
+                    <span>JavaScript</span>
+                    <span>Python</span>
+                    <span>Microservices</span>
+                    <span>AWS</span>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Production Incident -->
+
+<section class="incident-section">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="label">Production Incident</div>
+
+            <h2>Pay in 3 — High-Impact Merchant Incident</h2>
+
+            <p>
+                A production incident that demonstrates technical
+                troubleshooting, incident ownership, customer communication
+                and risk mitigation.
+            </p>
+
+        </div>
+
+
+        <div class="incident-card">
+
+            <h3>Restoring a critical payment flow under pressure</h3>
+
+            <div class="incident-grid">
+
+                <div class="incident-step">
+
+                    <strong>Situation</strong>
+
+                    <p>
+                        A high-volume enterprise merchant experienced failures
+                        on the Pay in 3 payment option, creating immediate
+                        transaction impact.
+                    </p>
+
+                </div>
+
+
+                <div class="incident-step">
+
+                    <strong>Ownership</strong>
+
+                    <p>
+                        As the technical lead, I took ownership of the incident,
+                        coordinated the engineering team and focused first on
+                        minimizing customer and business impact.
+                    </p>
+
+                </div>
+
+
+                <div class="incident-step">
+
+                    <strong>Immediate Mitigation</strong>
+
+                    <p>
+                        We temporarily disabled Pay in 3 through merchant
+                        configuration while keeping the other payment methods
+                        available, preventing customers from repeatedly
+                        encountering failed transactions.
+                    </p>
+
+                </div>
+
+
+                <div class="incident-step">
+
+                    <strong>Root Cause</strong>
+
+                    <p>
+                        Investigation identified a deprecated JavaScript
+                        variable/function in the merchant's website
+                        implementation as the underlying cause.
+                    </p>
+
+                </div>
+
+
+                <div class="incident-step">
+
+                    <strong>Resolution</strong>
+
+                    <p>
+                        I coordinated a hotfix, validated the payment flow,
+                        released the fix to production and closely monitored
+                        transactions after deployment.
+                    </p>
+
+                </div>
+
+
+                <div class="incident-step">
+
+                    <strong>Aftercare</strong>
+
+                    <p>
+                        I provided a detailed RCA and transaction impact report
+                        and worked with the team to introduce additional
+                        monitoring, alerts and preventive measures.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Experience -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="label">Experience</div>
+
+            <h2>Professional Journey</h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <h3>Lead Technical Consultant</h3>
+
+                <div class="company">Ushur</div>
+
+                <div class="date">
+                    Sep 2024 – May 2026
+                </div>
+
+                <p>
+                    Led enterprise solution architecture, AI-led use cases,
+                    automation, customer integrations, UAT and production
+                    delivery across Insurance, Healthcare and Financial
+                    Services.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>Lead Solution Engineer</h3>
+
+                <div class="company">Simpl</div>
+
+                <div class="date">
+                    Mar 2023 – Sep 2024
+                </div>
+
+                <p>
+                    Led Solution and QA teams delivering scalable payment
+                    solutions, APIs, merchant integrations and automation
+                    frameworks for enterprise customers.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>Senior Software Engineer / Lead</h3>
+
+                <div class="company">
+                    eSmart Vehicles & Hilton Software
+                </div>
+
+                <div class="date">
+                    2017 – 2023
+                </div>
+
+                <p>
+                    Built and led engineering initiatives across secure
+                    marketplaces, REST APIs, AWS infrastructure, search,
+                    payment gateways and enterprise software.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>Software Engineer</h3>
+
+                <div class="company">Globussoft Technologies</div>
+
+                <div class="date">
+                    2016 – 2017
+                </div>
+
+                <p>
+                    Developed enterprise modules and multi-gateway payment
+                    integrations using Laravel, PHP and Eloquent ORM.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Certifications -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div class="label">Certifications</div>
+
+            <h2>Continuous Learning</h2>
+
+        </div>
+
+
+        <div class="cert-grid">
+
+            <div class="cert">
+                AI Engineer Core Track — LLM Engineering, RAG, QLoRA & Agents
+            </div>
+
+            <div class="cert">
+                AWS Machine Learning & Artificial Intelligence Fundamentals
+            </div>
+
+            <div class="cert">
+                AWS Cloud Practitioner — CLF-C02
+            </div>
+
+            <div class="cert">
+                AI Agents & Workflows — Practical Guide
+            </div>
+
+            <div class="cert">
+                Ushur Intelligence Agentic AI Associate
+            </div>
+
+            <div class="cert">
+                Ushur Studio Certified Associate & Advanced
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Contact -->
+
+<section id="contact" class="contact">
+
+    <div class="container contact-content">
+
+        <h2>Let's build something meaningful.</h2>
+
+        <p>
+            I'm interested in opportunities across Solution Architecture,
+            Technical Consulting, AI Engineering, Cloud and Forward-Deployed
+            Engineering.
+        </p>
+
+        <div class="contact-links">
+
+            <a href="mailto:archana_kum@yahoo.in"
+               class="btn btn-primary">
+                Email Me
+            </a>
+
+            <a href="https://www.linkedin.com/in/archana-kum"
+               target="_blank"
+               class="btn btn-secondary">
+                LinkedIn
+            </a>
+
+            <a href="https://github.com/archana-ushur"
+               target="_blank"
+               class="btn btn-secondary">
+                GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <div class="container">
+
+        © 2026 Archana Kumari · Vancouver, Canada
+
+    </div>
+
+</footer>
+
+
 </body>
 </html>
+```
